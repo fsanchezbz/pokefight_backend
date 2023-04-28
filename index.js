@@ -4,7 +4,7 @@ require('dotenv').config()
 const express = require('express'); 
 const app = express();
 const PORT = process.env.PORT || 8000;
-//const cors = require('cors');
+const cors = require('cors');
 
 
 app.listen(PORT,() => console.log("Server listening on: http://localhost:"+PORT));
@@ -15,7 +15,7 @@ const corsOptions = {
     origin: '*'
 }
 
-//app.use(cors(corsOptions)); 
+app.use(cors(corsOptions)); 
 
 app.get('/',(req,res)=>{
        res.json(dbJson)
