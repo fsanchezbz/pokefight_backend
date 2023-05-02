@@ -17,7 +17,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions)); 
 
-app.get('/',(req,res)=>{
+app.get('/pokemon',(req,res)=>{
        res.json(dbJson)
 })
 
